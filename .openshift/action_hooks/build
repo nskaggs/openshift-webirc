@@ -1,0 +1,14 @@
+if [ ! -d $OPENSHIFT_DATA_DIR/webirc ]; then
+  cd $OPENSHIFT_DATA_DIR
+  # For now, webirc upstream doesn't pass host to server, resulting in error on openshift
+  git clone https://github.com/nskaggs/WebIRC.git webirc
+  cd webirc
+  echo 'Creating a default config...'
+  cp $OPENSHIFT_REPO_DIR/config.json config.json
+  echo 'Creating a default user...'
+  if [ ! -d $OPENSHIFT_DATA_DIR/users ]; then
+    mkdir users
+  fi
+  cp $OPENSHIFT_REPO_DIR/me.json users/me.json
+  npm install
+fi

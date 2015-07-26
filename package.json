@@ -1,0 +1,20 @@
+{
+  "name": "webirc",
+  "version": "1.0.0",
+  "description": "OpenShift webirc",
+  "scripts": {
+    "start": "./webirc --private --host $OPENSHIFT_NODEJS_IP --port $OPENSHIFT_NODEJS_PORT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kornagan/openshift-shoutirc"
+  },
+  "engines": {
+    "node": ">= 0.8.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true
+}
