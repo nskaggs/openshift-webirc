@@ -1,7 +1,6 @@
 if [ ! -d $OPENSHIFT_DATA_DIR/webirc ]; then
   cd $OPENSHIFT_DATA_DIR
-  # For now, webirc upstream doesn't pass host to server, resulting in error on openshift
-  git clone https://github.com/nskaggs/WebIRC.git webirc
+  git clone https://github.com/pavben/WebIRC.git webirc
   cd webirc
   echo 'Creating a default config...'
   cp $OPENSHIFT_REPO_DIR/config.json config.json
